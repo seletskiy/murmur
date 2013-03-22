@@ -58,7 +58,7 @@ int main(int argc, char** argv) {
     ssize_t n;
     uint64_t seed;
     int page_size = getpagesize();
-    int off;
+    uint64_t off;
     struct stat st;
     char *buf;
 
@@ -86,7 +86,7 @@ int main(int argc, char** argv) {
         munmap(buf, page_size);
     
         if (off && off % (page_size * 1024 * 10) == 0) {
-            fprintf(stderr, "hashed %6i MB\n", (uint64_t)off / 1024 / 1024);
+            fprintf(stderr, "hashed %6i MB\n", (uint64_t)off / 1024LLU / 1024LLU);
         }
 
         off += page_size;
