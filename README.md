@@ -1,4 +1,13 @@
-murmur
+Description
 ======
 
-Calculates MurMur hash for specified file
+Calculates MurmurHash for specified file. Should be faster, then
+utils like `shasum` and `md5sum`.
+
+See http://en.wikipedia.org/wiki/MurmurHash.
+
+Usage
+=====
+```
+./murmur file.ext
+```
